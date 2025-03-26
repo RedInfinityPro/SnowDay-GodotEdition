@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5p45scydqrme"]
+
+[ext_resource type="ArrayMesh" uid="uid://cx0cybd7ncqu2" path="res://tree and fern/oak tree.mesh" id="1_n336d"]
+[ext_resource type="Material" uid="uid://c8gtmsnqgmyym" path="res://tree and fern/oak tree slot 0.tres" id="2_q0ksg"]
+[ext_resource type="Material" uid="uid://d011f6rskndgh" path="res://tree and fern/oak tree slot 1.tres" id="3_osiwg"]
+
+[node name="oak" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.364009, 0, 1.48322)
+
+[node name="tree" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+mesh = ExtResource("1_n336d")
+surface_material_override/0 = ExtResource("2_q0ksg")
+surface_material_override/1 = ExtResource("3_osiwg")

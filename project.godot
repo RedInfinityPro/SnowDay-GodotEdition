@@ -1,0 +1,58 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Snow Day"
+run/main_scene="uid://duhgj6qc07qao"
+config/features=PackedStringArray("4.4", "Forward Plus")
+boot_splash/show_image=false
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=2
+window/stretch/mode="canvas_items"
+window/stretch/aspect="ignore"
+window/vsync/vsync_mode=3
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/GodotOceanWaves-main/addons/imgui-godot/plugin.cfg", "res://addons/instant-realistic-light/plugin.cfg")
+
+[rendering]
+
+lights_and_shadows/use_physical_light_units=true
+lights_and_shadows/directional_shadow/soft_shadow_filter_quality=3
+anti_aliasing/quality/msaa_3d=1
+
+[shader_globals]
+
+displacements={
+"type": "sampler2DArray",
+"value": ""
+}
+foam_color={
+"type": "color",
+"value": Color(1, 1, 1, 1)
+}
+normal={
+"type": "sampler2DArray",
+"value": ""
+}
+num_cascades={
+"type": "int",
+"value": 3
+}
+water_color={
+"type": "color",
+"value": Color(0, 0, 0, 1)
+}

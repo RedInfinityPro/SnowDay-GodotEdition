@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://dlusbo3cc8hi8"]
+
+[ext_resource type="Texture2D" uid="uid://d0khbxf34v3vm" path="res://addons/kenney_particle_pack/smoke_01.png" id="1_onfh6"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_p1fig"]
+emission_shape_scale = Vector3(100, 1, 100)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+angle_min = 1.07288e-05
+angle_max = 360.0
+direction = Vector3(1, -1, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 1000.0
+angular_velocity_min = 0.999984
+angular_velocity_max = 50.0
+linear_accel_min = 0.999998
+linear_accel_max = 10.0
+scale_max = 3.0
+turbulence_noise_scale = 10.0
+turbulence_noise_speed_random = 4.0
+turbulence_initial_displacement_min = 1.49012e-06
+turbulence_initial_displacement_max = 100.0
+collision_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hdt4g"]
+transparency = 1
+shading_mode = 0
+albedo_texture = ExtResource("1_onfh6")
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_l0acc"]
+material = SubResource("StandardMaterial3D_hdt4g")
+size = Vector2(2, 2)
+
+[node name="Weather" type="Node3D"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+amount = 10000
+lifetime = 8.0
+randomness = 0.48
+visibility_aabb = AABB(-503.966, -8422.55, -5457.75, 8587.86, 8603.27, 10958.1)
+process_material = SubResource("ParticleProcessMaterial_p1fig")
+draw_pass_1 = SubResource("QuadMesh_l0acc")
